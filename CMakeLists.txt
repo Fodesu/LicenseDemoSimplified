@@ -14,7 +14,14 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(LicenseDemoSimplified main.cpp MainWindow.cpp)
+
+FILE(GLOB UI_FILES "*.ui")
+QT5_WRAP_UI(WRAP_FILES ${UI_FILES})
+
+add_executable(LicenseDemoSimplified main.cpp MainWindow.cpp FileVerific.cpp CodeVerific.cpp  ${UI_FILES})
+
+
+
 target_link_libraries(LicenseDemoSimplified
         Qt5::Core
         Qt5::Gui
