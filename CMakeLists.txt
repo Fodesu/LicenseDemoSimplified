@@ -14,7 +14,7 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(LicenseDemoSimplified main.cpp)
+add_executable(LicenseDemoSimplified main.cpp MainWindow.cpp)
 target_link_libraries(LicenseDemoSimplified
         Qt5::Core
         Qt5::Gui
